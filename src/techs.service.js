@@ -2,4 +2,8 @@ const listOfTechs = () => {
   return ["GO", "Kubernetes", "NODE"];
 };
 
-module.exports = { listOfTechs };
+const pushTechs = (tec) => {
+  return [...tec];
+};
+
+module.exports = { listOfTechs, pushTechs };
