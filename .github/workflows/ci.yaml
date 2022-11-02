@@ -8,5 +8,5 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 18.3.0
-      - run: node test
+      - run: npm test
       - run: node index.js
