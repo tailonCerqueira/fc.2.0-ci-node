@@ -3,16 +3,12 @@ on:
   pull_request:
     branches:
       - develop
-      
 jobs:
   check-application:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node: ['18.3.0', '16.15.1']    
     steps:
       - uses: actions/checkout@v2
       - name: Install modules
         run: npm i
       - name: Run tests
-        run: npm test
+        run: npm test -coverprofile=coverage.out
