@@ -1,13 +1,13 @@
+const techsService = require("./techs.service");
+
 const express = require("express");
 const app = express();
 
 app.get("/", (req, res) => {
-  res.send("OK");
+  const techs = techsService.listOfTechs();
+  res.send(techs);
 });
 
 app.listen(3000, () => {
   console.log("Starting application");
 });
-
-// uses: usar action
-// run: rodar comando
