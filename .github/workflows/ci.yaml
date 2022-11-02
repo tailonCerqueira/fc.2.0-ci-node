@@ -1,15 +1,15 @@
 name: ci-node-with-express-workflow
 on: [push]
 jobs:
-  build:
+  check-application:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Install modules
-      run: npm i
-    - name: Run tests
-      run: npm test
-    - uses: actions/setup-node@v2
-      with:
-        node-version: 18.3.0
-    - run: node index.js
+      - uses: actions/checkout@v2
+      - name: Install modules
+        run: npm i
+      - name: Run tests
+        run: npm test
+      # - uses: actions/setup-node@v2
+      #   with:
+      #     node-version: 18.3.0
+      #   run: node index.js
