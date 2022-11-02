@@ -8,5 +8,5 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 14.10
-      - run: node test
+      - run: node run test
       - run: node index.js
