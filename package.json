@@ -6,6 +6,13 @@
   "scripts": {
     "test": "jest --coverage"
   },
+  "jest": {
+    "coverageReporters": [
+      "text",
+      "cobertura",
+      "lcov"
+    ]
+  },
   "keywords": [
     "node",
     "ci"
